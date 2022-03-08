@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+ServerName <%= @servername %>
+ServerAlias www.<%= @servername %>
+DocumentRoot /var/www/sites/<%= @env %>
+ErrorLog /var/log/httpd/<%= @env %>/error.log
+</VirtualHost>

@@ -1,0 +1,51 @@
+{
+  "revision_id": "880e9fb7a3c660dab6569072c1a7a822c7695ca328135d5647ea37d126343f65",
+  "name": "policyfile-lamp",
+  "run_list": [
+    "recipe[lamp::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "lamp": {
+      "version": "1.0.0",
+      "identifier": "f3cfb3051e338920d37e3e96b612e293a9136794",
+      "dotted_decimal_identifier": "68626787132650377.9239738424145426.249123824691092",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "5e4cbaaf92dd18510fbaa71db66143f3d0340dee",
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "lamp",
+        "~> 1.0.0"
+      ]
+    ],
+    "dependencies": {
+      "lamp (1.0.0)": [
+
+      ]
+    }
+  }
+}
