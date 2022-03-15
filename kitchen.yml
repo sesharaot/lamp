@@ -1,9 +1,6 @@
 ---
 driver:
   name: docker
-  run_command: /bin/systemd
-  cap_add:
-    - SYS_ADMIN
 
 ## The forwarded_port port feature lets you connect to ports on the VM guest
 ## via localhost on the host.
@@ -25,6 +22,13 @@ verifier:
 
 platforms:
   - name: centos-7.2
+    driver_config:
+      image: centos/systemd
+      run_command: /usr/sbin/init
+      privileged: true
+      provision_command:
+        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - systemctl enable sshd.service
 
 suites:
   - name: default
